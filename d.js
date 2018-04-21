@@ -36,4 +36,8 @@ function inSo(fn) {
 // inSo(x => x % 2 === 0);
 // inSo(x => x % 2 === 1);
 // inSo(x => x % 3 === 1);
-inSo(x => Math.sqrt(x) % 1 === 0);
+inSo(x => {
+    const dk1 = (x - 1) % 3 === 0;
+    const dk2 = (x + 1) % 4 === 0;
+    return dk1 || dk2;
+});
